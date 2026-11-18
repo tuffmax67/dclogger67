@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Logger Demo</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <img
+        src="{{ image_url }}"
+        alt="Display image"
+        style="max-width: 500px;"
+    >
+
+    <h2>Visitor consent</h2>
+
+    <form action="/visit" method="POST">
+        <label>
+            Country (optional):
+            <input name="country">
+        </label>
+
+        <br><br>
+
+        <label>
+            <input
+                type="checkbox"
+                name="consent"
+                value="yes"
+                required
+            >
+            I agree to send this voluntary visit notification.
+        </label>
+
+        <br><br>
+
+        <button type="submit">Continue</button>
+    </form>
+</body>
+</html>
